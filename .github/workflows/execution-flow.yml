@@ -9,9 +9,9 @@ jobs:
       matrix:
         os: [ubuntu-latest,macos-latest]
         msj: ['Michel', 'Chilito']
-        include:
-          - os: [ubuntu-latest]
-            msj: ['lala']
+        #include:
+        #  - os: [ubuntu-latest]
+        #    msj: ['lala']
         exclude:
           - os: [ubuntu-latest, macos-latest]
             msj: ['Chilito']
