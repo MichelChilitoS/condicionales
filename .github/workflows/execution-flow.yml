@@ -9,12 +9,14 @@ jobs:
       matrix:
         os: [ubuntu-latest,macos-latest]
         msj: ['Michel', 'Chilito']
-        #include:
-        #  - os: [ubuntu-latest]
-        #    msj: ['lala']
+        include:
+          - os: [ubuntu-latest]
+            msj: ['lala']
         exclude:
-          - os: [ubuntu-latest, macos-latest]
-            msj: ['Chilito']
+          - os: ubuntu-latest
+            msj: Chilito
+          - os: macos-latest
+            msj: Chilito
     runs-on: ${{ matrix.os }}
     steps:
       - name: Imprimiendo valores de matrix
